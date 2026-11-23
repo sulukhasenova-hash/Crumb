@@ -1,0 +1,137 @@
+// ======================================
+// ФИЛЬТР МЕНЮ
+// ======================================
+
+function filterMenu(category) {
+
+    const foods = document.querySelectorAll(".food");
+
+    foods.forEach(function(food) {
+
+        if (category === "all") {
+
+            food.style.display = "block";
+
+        } else {
+
+            if (food.classList.contains(category)) {
+
+                food.style.display = "block";
+
+            } else {
+
+                food.style.display = "none";
+
+            }
+
+        }
+
+    });
+
+}
+
+
+// ======================================
+// ВЫПЕЧКА НЕДЕЛИ
+// ======================================
+
+const weeklyProducts = [
+
+    {
+        name: "Фисташковый круассан",
+
+        description:
+            "Воздушный круассан с нежным фисташковым кремом и хрустящими орехами.",
+
+        price: "990 ₸",
+
+        image:
+            "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=80"
+    },
+
+
+    {
+        name: "Яблочный тарт",
+
+        description:
+            "Тонкое песочное тесто, карамелизированные яблоки и ванильный крем.",
+
+        price: "850 ₸",
+
+        image:
+            "https://images.unsplash.com/photo-1562007908-17c67e878c88?auto=format&fit=crop&w=1000&q=80"
+    },
+
+
+    {
+        name: "Булочка с кардамоном",
+
+        description:
+            "Мягкое тесто, ароматный кардамон и сахарная корочка.",
+
+        price: "690 ₸",
+
+        image:
+            "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80"
+    },
+
+
+    {
+        name: "Круффин с корицей",
+
+        description:
+            "Слоёное тесто, корица и сливочная глазурь. Идеально с капучино.",
+
+        price: "890 ₸",
+
+        image:
+            "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=1000&q=80"
+    }
+
+];
+
+
+// Получаем номер недели
+
+function getWeekNumber(date) {
+
+    const start =
+        new Date(date.getFullYear(), 0, 1);
+
+    const difference =
+        date - start;
+
+    const days =
+        Math.floor(difference / 86400000);
+
+    return Math.ceil(
+        (days + start.getDay() + 1) / 7
+    );
+}
+
+
+const currentWeek =
+    getWeekNumber(new Date());
+
+
+// Выбираем выпечку
+
+const weeklyProduct =
+    weeklyProducts[
+        currentWeek % weeklyProducts.length
+    ];
+
+
+// Выводим её на сайт
+
+document.getElementById("weekName").textContent =
+    weeklyProduct.name;
+
+document.getElementById("weekDescription").textContent =
+    weeklyProduct.description;
+
+document.getElementById("weekPrice").textContent =
+    weeklyProduct.price;
+
+document.getElementById("weekImage").src =
+    weeklyProduct.image;

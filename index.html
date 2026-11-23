@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumb — Пекарня-кондитерская</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+        .cakes .card img {
+            width: 220px;
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+        
+        .person img {
+            width: 180px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+
+        .secret-card img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        
+        @media (max-width: 600px) {
+            .cakes .card img {
+                width: 190px;
+                height: 160px;
+            }
+
+            .person img {
+                width: 150px;
+                height: 170px;
+            }
+
+            .secret-card img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Crumb</div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#menu">Меню</a>
+        <a href="#cakes">Торты</a>
+        <a href="#week">Неделя</a>
+        <a href="#secret">Тайное меню</a>
+        <a href="#team">Команда</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
+
+<button class="cart-button" onclick="openCart()">
+    🛒 Корзина (<span id="cartCount">0</span>)
+</button>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <p class="label">BAKERY & CAKES</p>
+        <h1>Crumb</h1>
+        <h2>Свежая выпечка каждый день</h2>
+
+        <p>
+            В Crumb каждый день готовится свежая выпечка —
+            от простых десертов до красивых тортов.
+            Каждую неделю у нас появляется особенная выпечка,
+            а для любителей чего-то необычного есть тайное меню.
+        </p>
+
+        <a href="#menu" class="button">Посмотреть меню</a>
+    </div>
+</section>
+
+<section id="menu">
+
+    <h2 class="title">Выпечка и десерты</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Классический круассан</h3>
+                <p>Хрустящий снаружи и воздушный внутри.</p>
+                <b>580 ₸</b>
+
+                <button onclick="addToCart('Классический круассан',580)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Ягодный чизкейк</h3>
+                <p>Сливочная начинка и свежие ягоды.</p>
+                <b>1100 ₸</b>
+
+                <button onclick="addToCart('Ягодный чизкейк',1100)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.gastronom.ru/WWo8jBapvooRhm-bFM_meMmRKoEYGHEWuvEHsLNa19Y/pr%3Arecipe-cover-image/g%3Ace/rs%3Aauto%3A0%3A0%3A0/L2Ntcy9hbGwtaW1hZ2VzL2Y5ZjQ5NjE4LTRhYzctNDUyZi1iYWE1LWQ1NDI5NzBhYzM4OS5qcGc.webp">
+
+            <div class="card-text">
+                <h3>Пончики</h3>
+                <p>Мягкие пончики с нежной глазурью.</p>
+                <b>666 ₸</b>
+
+                <button onclick="addToCart('Пончики',666)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Ягодный тарт</h3>
+                <p>Песочная основа, крем и ягоды.</p>
+                <b>450 ₸</b>
+
+                <button onclick="addToCart('Ягодный тарт',450)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Cookies с шоколадом</h3>
+                <p>Большое домашнее печенье с шоколадом.</p>
+                <b>550 ₸</b>
+
+                <button onclick="addToCart('Cookies с шоколадом',550)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Ванильный капкейк</h3>
+                <p>Нежный бисквит со сливочным кремом.</p>
+                <b>560 ₸</b>
+
+                <button onclick="addToCart('Ванильный капкейк',560)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://img02.rl0.ru/69723d3db89f539340d747bd19d5bd78/c930x525i/s1.eda.ru/StaticContent/Photos/Upscaled/130822102925/190811210038/p_O.jpg">
+
+            <div class="card-text">
+                <h3>Булочка с корицей</h3>
+                <p>Мягкая булочка с корицей и сливочным кремом.</p>
+                <b>480 ₸</b>
+
+                <button onclick="addToCart('Булочка с корицей',480)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cakes" id="cakes">
+
+    <h2 class="title">Торты</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Шоколадный торт</h3>
+                <p>Шоколадный бисквит и нежный крем.</p>
+                <b>от 5400 ₸</b>
+
+                <button onclick="addToCart('Шоколадный торт',5400)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=85">
+
+            <div class="card-text">
+                <h3>Клубничный торт</h3>
+                <p>Сливочный крем и свежая клубника.</p>
+                <b>от 6700 ₸</b>
+
+                <button onclick="addToCart('Клубничный торт',6700)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://my-gril.ru/images/vypechka/medovik-so-smetannym-kremom.jpg">
+
+            <div class="card-text">
+                <h3>Медовик</h3>
+                <p>Медовые коржи и нежный сливочный крем.</p>
+                <b>от 4400 ₸</b>
+
+                <button onclick="addToCart('Медовик',4400)">
+                    В корзину
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="weekly" id="week">
+
+    <h2 class="title">Выпечка недели</h2>
+
+    <div class="weekly-box">
+
+        <img id="weeklyImage" src="" alt="Лимонный пирог">
+
+        <div>
+            <p class="label">SPECIAL THIS WEEK</p>
+            <h2 id="weeklyName"></h2>
+            <p id="weeklyDescription"></p>
+            <b id="weeklyPrice"></b>
+
+            <br><br>
+
+            <button id="weeklyButton">
+                В корзину
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="secret" id="secret">
+
+    <h2 class="title">Тайное меню</h2>
+
+    <p class="center">
+        Особенные десерты, которые появляются
+        в Crumb время от времени.
+    </p>
+
+    <div class="secret-grid">
+
+        <div class="secret-card">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Whiskey_Chocolate_Cake.jpg/500px-Whiskey_Chocolate_Cake.jpg">
+
+            <h3>Шоколадный краффин</h3>
+            <p>Шоколад и орехи с любовью к вам.</p>
+            <b>950 ₸</b>
+
+            <button onclick="addToCart('Шоколадный краффин',950)">
+                В корзину
+            </button>
+
+        </div>
+
+        <div class="secret-card">
+
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85">
+
+            <h3>Cookies XXL</h3>
+            <p>Большое печенье с шоколадом.</p>
+            <b>900 ₸</b>
+
+            <button onclick="addToCart('Cookies XXL',900)">
+                В корзину
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about">
+
+    <h2 class="title">О Crumb</h2>
+
+    <p>
+        Crumb — уютная пекарня-кондитерская,
+        где каждый день готовят свежую выпечку,
+        торты и десерты для наших любимых покупателей.
+    </p>
+
+</section>
+
+<section id="team">
+
+    <h2 class="title">Наша команда</h2>
+
+    <div class="team">
+
+        <div class="person">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=85">
+
+            <h3>Алина Дисертовна</h3>
+            <p>Кондитер</p>
+            <span>24 года • 4 года опыта</span>
+        </div>
+
+        <div class="person">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85">
+
+            <h3>Дмитрий Сувениров</h3>
+            <p>Пекарь</p>
+            <span>30 лет • 8 лет опыта</span>
+        </div>
+
+        <div class="person">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=600&q=85">
+
+            <h3>Маринет Дюпон</h3>
+            <p>Бариста</p>
+            <span>28 лет • 6 лет опыта</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="reviews">
+
+    <h2 class="title">Отзывы</h2>
+
+    <div class="reviews-grid">
+
+        <div>
+            <p>«Очень вкусно, приду сюда еще раз, классная выпечка и красивая обстановка!»</p>
+            <b>Альбина</b>
+        </div>
+
+        <div>
+            <p>«Торт был замечательным, но ягодный тарт был чересчур сладким.»</p>
+            <b>Дильназ</b>
+        </div>
+
+        <div>
+            <p>«Лучшее, что я пробовал! Особенно понравились пончики и ванильные капкейки.»</p>
+            <b>Димон</b>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contacts" id="contacts">
+
+    <h2 class="title">Контакты</h2>
+
+    <p>ул. Пушкина, 67, Астана</p>
+    <p>Каждый день: 07:30–20:00</p>
+    <p>+7 777 67 67</p>
+    <p>Instagram: @crumb.bakery</p>
+
+</section>
+
+<footer>
+
+    <h2>Crumb</h2>
+    <p>Свежая выпечка. Тёплая атмосфера.</p>
+    <p>© 2026 Crumb Bakery</p>
+
+</footer>
+
+<div id="cartWindow" class="cart-window">
+
+    <div class="cart-content">
+
+        <button class="close" onclick="closeCart()">×</button>
+
+        <h2>🛒 Моя корзина</h2>
+
+        <div id="cartItems"></div>
+
+        <h3>
+            Итого: <span id="cartTotal">0</span> ₸
+        </h3>
+
+        <button class="buy-button" onclick="buyProducts()">
+            Купить
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

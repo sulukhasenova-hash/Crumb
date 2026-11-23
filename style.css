@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #3d2920;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #3d2920;
+}
+
+nav a:hover {
+    color: #9a6240;
+}
+
+
+/* ГЛАВНАЯ */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 30px;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+.label {
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #7c5035;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+section {
+    padding: 60px 7%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card,
+.secret-card,
+.person {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 20px;
+}
+
+.card-text p {
+    color: #6d5a50;
+}
+
+.card button,
+.secret-card button,
+#weeklyButton {
+    display: block;
+    margin-top: 12px;
+    padding: 9px 15px;
+    background: #7c5035;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.card button:hover,
+.secret-card button:hover,
+#weeklyButton:hover,
+.buy-button:hover {
+    background: #5f3d29;
+}
+
+
+.cart-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    padding: 13px 20px;
+    background: #7c5035;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-window {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #00000080;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.cart-content {
+    background: white;
+    width: 450px;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-item button {
+    margin: 5px;
+    padding: 5px 9px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 13px;
+    background: #7c5035;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.weekly-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.weekly-box img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.secret-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.secret-card {
+    padding-bottom: 20px;
+}
+
+.secret-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.secret-card h3,
+.secret-card p,
+.secret-card b,
+.secret-card button {
+    margin-left: 20px;
+}
+
+
+.about {
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.person {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.person img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.person span {
+    color: #777;
+}
+
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.reviews-grid div {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+
+.contacts {
+    text-align: center;
+}
+
+
+footer {
+    background: #3d2920;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+
+@media (max-width: 800px) {
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .products,
+    .team,
+    .reviews-grid,
+    .secret-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weekly-box {
+        display: block;
+    }
+
+    .weekly-box img {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }

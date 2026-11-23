@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crumb — пекарня</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Crumb<span>.</span></div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#menu">Меню</a>
+        <a href="#week">Выпечка недели</a>
+        <a href="#secret">Тайное меню</a>
+        <a href="#about">О нас</a>
+        <a href="#team">Команда</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
+
+
+<!-- ГЛАВНЫЙ ЭКРАН -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <p class="small-title">ПЕКАРНЯ • КОФЕ • УЮТ</p>
+
+        <h1>
+            Тёплые моменты
+            начинаются с
+            <span>Crumb.</span>
+        </h1>
+
+        <p>
+            Свежая выпечка каждое утро,
+            ароматный кофе и маленькие
+            радости, которые хочется повторить.
+        </p>
+
+        <a href="#menu" class="button">
+            Посмотреть меню
+        </a>
+
+    </div>
+
+    <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80">
+    </div>
+
+</section>
+
+
+<!-- МЕНЮ -->
+
+<section id="menu">
+
+    <div class="section-title">
+
+        <p class="small-title">НАШЕ МЕНЮ</p>
+
+        <h2>
+            Выпечка, ради которой
+            хочется зайти снова
+        </h2>
+
+        <p>
+            Мы готовим небольшими партиями,
+            поэтому выпечка всегда свежая.
+        </p>
+
+    </div>
+
+
+    <div class="filters">
+
+        <button onclick="filterMenu('all')">Всё</button>
+        <button onclick="filterMenu('sweet')">Сладкое</button>
+        <button onclick="filterMenu('savory')">Несладкое</button>
+        <button onclick="filterMenu('bread')">Хлеб</button>
+        <button onclick="filterMenu('drink')">Напитки</button>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="food sweet">
+
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>СЛАДКОЕ</small>
+
+                <h3>Классический круассан</h3>
+
+                <p>
+                    Хрустящий снаружи
+                    и воздушный внутри.
+                </p>
+
+                <b>490 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food sweet">
+
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>СЛАДКОЕ</small>
+
+                <h3>Шоколадный брауни</h3>
+
+                <p>
+                    Насыщенный шоколадный
+                    десерт с орехами.
+                </p>
+
+                <b>650 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food sweet">
+
+            <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>СЛАДКОЕ</small>
+
+                <h3>Нью-Йорк чизкейк</h3>
+
+                <p>
+                    Нежный сливочный крем
+                    и песочная основа.
+                </p>
+
+                <b>890 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food sweet">
+
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>СЛАДКОЕ</small>
+
+                <h3>Медовик</h3>
+
+                <p>
+                    Медовые коржи
+                    и нежный крем.
+                </p>
+
+                <b>850 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food sweet">
+
+            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>СЛАДКОЕ</small>
+
+                <h3>Маффин с черникой</h3>
+
+                <p>
+                    Мягкое тесто,
+                    черника и хрустящая крошка.
+                </p>
+
+                <b>550 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food savory">
+
+            <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НЕСЛАДКОЕ</small>
+
+                <h3>Самса с курицей</h3>
+
+                <p>
+                    Румяное тесто
+                    и сочная начинка.
+                </p>
+
+                <b>690 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food savory">
+
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НЕСЛАДКОЕ</small>
+
+                <h3>Мини-пицца</h3>
+
+                <p>
+                    Томатный соус,
+                    моцарелла и базилик.
+                </p>
+
+                <b>790 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food savory">
+
+            <img src="https://images.unsplash.com/photo-1620921575116-fb7a4c7e7a95?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НЕСЛАДКОЕ</small>
+
+                <h3>Слойка с сыром</h3>
+
+                <p>
+                    Слоёное тесто,
+                    сыр и зелень.
+                </p>
+
+                <b>620 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food bread">
+
+            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>ХЛЕБ</small>
+
+                <h3>Деревенский хлеб</h3>
+
+                <p>
+                    Хлеб на закваске
+                    с хрустящей корочкой.
+                </p>
+
+                <b>1100 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food bread">
+
+            <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>ХЛЕБ</small>
+
+                <h3>Бриошь</h3>
+
+                <p>
+                    Сливочная, мягкая
+                    и слегка сладкая.
+                </p>
+
+                <b>750 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food drink">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НАПИТКИ</small>
+
+                <h3>Капучино Crumb</h3>
+
+                <p>
+                    Эспрессо, молоко
+                    и нежная пенка.
+                </p>
+
+                <b>850 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food drink">
+
+            <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НАПИТКИ</small>
+
+                <h3>Матча-латте</h3>
+
+                <p>
+                    Японская матча
+                    и нежное молоко.
+                </p>
+
+                <b>1050 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food drink">
+
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НАПИТКИ</small>
+
+                <h3>Ягодный лимонад</h3>
+
+                <p>
+                    Ягоды, лимон
+                    и домашний сироп.
+                </p>
+
+                <b>900 ₸</b>
+            </div>
+
+        </div>
+
+
+        <div class="food drink">
+
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80">
+
+            <div>
+                <small>НАПИТКИ</small>
+
+                <h3>Облепиховый чай</h3>
+
+                <p>
+                    Облепиха, апельсин
+                    и мёд.
+                </p>
+
+                <b>850 ₸</b>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ВЫПЕЧКА НЕДЕЛИ -->
+
+<section class="week" id="week">
+
+    <div>
+
+        <p class="small-title">ОСОБЕННОЕ</p>
+
+        <h2>Выпечка недели</h2>
+
+        <p>
+            Каждую неделю мы выбираем
+            новую выпечку. Поэтому
+            специальное предложение
+            постоянно меняется.
+        </p>
+
+        <div class="week-card">
+
+            <h3 id="weekName"></h3>
+
+            <p id="weekDescription"></p>
+
+            <strong id="weekPrice"></strong>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <img id="weekImage"
+             class="week-photo"
+             src=""
+             alt="Выпечка недели">
+
+    </div>
+
+</section>
+
+
+<!-- ТАЙНОЕ МЕНЮ -->
+
+<section id="secret">
+
+    <div class="secret-box">
+
+        <p class="small-title">ТОЛЬКО ДЛЯ СВОИХ</p>
+
+        <h2>Тайное меню 🔐</h2>
+
+        <p>
+            Эти позиции не указаны
+            на основной витрине.
+            Скажи бариста кодовое слово
+            <b>«CRUMB»</b>.
+        </p>
+
+
+        <div class="secret-grid">
+
+            <div>
+                <span>01</span>
+
+                <h3>Карамельный круффин</h3>
+
+                <p>
+                    Круассан + маффин
+                    + солёная карамель.
+                </p>
+
+                <b>950 ₸</b>
+            </div>
+
+
+            <div>
+                <span>02</span>
+
+                <h3>Клубничный тарт</h3>
+
+                <p>
+                    Хрустящая основа,
+                    крем и клубника.
+                </p>
+
+                <b>1100 ₸</b>
+            </div>
+
+
+            <div>
+                <span>03</span>
+
+                <h3>Cookies XXL</h3>
+
+                <p>
+                    Большое печенье
+                    с шоколадом и фундуком.
+                </p>
+
+                <b>750 ₸</b>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- О ПЕКАРНЕ -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div>
+
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+
+        <div>
+
+            <p class="small-title">О CRUMB</p>
+
+            <h2>
+                Небольшая пекарня
+                с большим вниманием
+                к деталям
+            </h2>
+
+            <p>
+                Crumb — уютная городская
+                пекарня, где каждый день
+                пахнет свежим хлебом,
+                сливочным тестом и кофе.
+            </p>
+
+            <p>
+                Мы печём небольшими партиями
+                и стараемся делать простые
+                вещи действительно вкусными.
+            </p>
+
+            <div class="facts">
+
+                <div>
+                    <b>2024</b>
+                    <span>открылись</span>
+                </div>
+
+                <div>
+                    <b>14+</b>
+                    <span>видов выпечки</span>
+                </div>
+
+                <div>
+                    <b>7:30</b>
+                    <span>открываемся</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- КОМАНДА -->
+
+<section class="team-section" id="team">
+
+    <div class="section-title">
+
+        <p class="small-title">КОМАНДА</p>
+
+        <h2>Люди, которые пекут Crumb</h2>
+
+        <p>
+            За каждой выпечкой стоят люди,
+            которые любят своё дело.
+        </p>
+
+    </div>
+
+
+    <div class="team-grid">
+
+
+        <div class="person">
+
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80">
+
+            <h3>Алина Ким</h3>
+
+            <p>Шеф-кондитер</p>
+
+            <span>29 лет • стаж 7 лет</span>
+
+        </div>
+
+
+        <div class="person">
+
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80">
+
+            <h3>Данияр Сейтбек</h3>
+
+            <p>Пекарь-технолог</p>
+
+            <span>34 года • стаж 11 лет</span>
+
+        </div>
+
+
+        <div class="person">
+
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80">
+
+            <h3>Мария Орлова</h3>
+
+            <p>Бариста</p>
+
+            <span>26 лет • стаж 5 лет</span>
+
+        </div>
+
+
+        <div class="person">
+
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80">
+
+            <h3>Ерлан Ахметов</h3>
+
+            <p>Пекарь</p>
+
+            <span>31 год • стаж 8 лет</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ОТЗЫВЫ -->
+
+<section id="reviews">
+
+    <div class="section-title">
+
+        <p class="small-title">ГОСТИ ГОВОРЯТ</p>
+
+        <h2>Отзывы посетителей</h2>
+
+    </div>
+
+
+    <div class="reviews">
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                «Очень приятное место.
+                Круассан был свежий,
+                а капучино — отличный.
+                Особенно понравилась атмосфера.»
+            </p>
+
+            <b>— Анастасия</b>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                «Зашёл случайно и теперь
+                специально прихожу за медовиком.
+                Ещё очень понравился
+                облепиховый чай.»
+            </p>
+
+            <b>— Тимур</b>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                «Уютно, красиво и без ощущения
+                обычного сетевого кафе.
+                Выпечка действительно вкусная.»
+            </p>
+
+            <b>— София</b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- КОНТАКТЫ -->
+
+<section class="contacts" id="contacts">
+
+    <div>
+
+        <p class="small-title">ЖДЁМ В ГОСТИ</p>
+
+        <h2>
+            Загляни на свежую
+            выпечку
+        </h2>
+
+        <p>
+            Приходи за завтраком,
+            кофе после учёбы или
+            чем-нибудь сладким домой.
+        </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <p>
+            <b>📍 Адрес</b><br>
+            ул. Абая, 25, Рудный
+        </p>
+
+        <p>
+            <b>🕐 Время работы</b><br>
+            Ежедневно, 7:30–20:00
+        </p>
+
+        <p>
+            <b>📷 Instagram</b><br>
+            @crumb.bakery
+        </p>
+
+        <p>
+            <b>☎ Телефон</b><br>
+            +7 (700) 123-45-67
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <b>Crumb.</b>
+
+    <span>
+        Свежо. Просто. С любовью.
+    </span>
+
+    <span>
+        © 2026 Crumb Bakery
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
